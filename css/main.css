@@ -1,10 +1,16 @@
 /* init */
 html,
-body,ul,li {
+body,
+ul,
+li {
     margin: 0;
     padding: 0;
     color: #333;
     font-family: sans-serif;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 a {
@@ -32,17 +38,22 @@ li {
 }
 
 .icon {
-    width: 1em; height: 1em;
+    width: 1em;
+    height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
- }
+}
 
- .icon {
-     width: 30px;
-     height: 30px;
-     fill: #fff;
- }
+.icon {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+}
+
+body {
+    background: #eee;
+}
 
 /* header */
 header .mask {
@@ -50,8 +61,8 @@ header .mask {
     height: 515px;
 }
 
-header .banner{
-    background: url(../img/rs-cover.jpg) ;
+header .banner {
+    background: url(../img/rs-cover.jpg);
     background-size: cover;
     height: 515px;
     position: absolute;
@@ -66,7 +77,7 @@ header .topNavBar {
 header .topNavBar .logo span:nth-child(1) {
     color: #e6686a;
     font-size: 24px;
-    margin-right:6px;
+    margin-right: 6px;
     font-weight: bold;
 }
 
@@ -83,7 +94,7 @@ header nav a {
     padding: 7px 0;
 }
 
-header nav a:hover  {
+header nav a:hover {
     border-bottom: 3px solid #e06567;
 }
 
@@ -150,10 +161,10 @@ header .selfInfo .textInfo .job {
 
 
 header .info-row {
-    padding: 5px 0 ;
+    padding: 5px 0;
 }
 
-header .info-row span:first-child{
+header .info-row span:first-child {
     width: 140px;
     font-weight: bold;
     display: inline-block;
@@ -169,7 +180,7 @@ header .chatInfo {
     text-align: center;
 }
 
-header .chatInfo a{
+header .chatInfo a {
     margin: 0 30px;
     height: 30px;
     width: 30px;
@@ -177,8 +188,172 @@ header .chatInfo a{
     vertical-align: top;
 }
 
-header .chatInfo a:hover{
+header .chatInfo a:hover {
     border-radius: 50%;
-    box-shadow:  0px 0px 0px 7px rgba(100, 100, 100, .1);
+    box-shadow: 0px 0px 0px 7px rgba(100, 100, 100, .1);
     background: rgba(100, 100, 100, .1);
+}
+
+.skills h2,
+.works h2 {
+    text-align: center;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.skills {
+    justify-content: center;
+}
+
+.skills .skillCard {
+    margin: 0 auto;
+    display: flex;
+    background: white;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    padding: 42px 50px 50px 42px;
+    margin-top: 30px;
+    max-width: 940px;
+    flex-wrap: wrap;
+}
+
+.skills .skillRow {
+    width: 44%;
+    margin: 0 3%;
+}
+
+.skills .skillRow .loading {
+    height: 5px;
+    background: #FAE1E1;
+    border-radius: 2px
+}
+
+.skills .skillRow:nth-child(1) .loaded {
+    background: rgb(255, 174, 174);
+    width: 85%;
+    height: 5px;
+    border-radius: 2px
+}
+
+.skills .skillRow:nth-child(2) .loaded {
+    background: rgb(255, 174, 174);
+    width: 50%;
+    height: 5px;
+    border-radius: 2px
+}
+
+.skills .skillRow:nth-child(3) .loaded {
+    background: rgb(255, 174, 174);
+    width: 90%;
+    height: 5px;
+    border-radius: 2px
+}
+
+.skills .skillRow:nth-child(4) .loaded {
+    background: rgb(255, 174, 174);
+    width: 80%;
+    height: 5px;
+    border-radius: 2px
+}
+
+.skills .skillRow:nth-child(5) .loaded {
+    background: rgb(255, 174, 174);
+    width: 65%;
+    height: 5px;
+    border-radius: 2px
+}
+
+.skills .skillRow:nth-child(6) .loaded {
+    background: rgb(255, 174, 174);
+    width: 30%;
+    height: 5px;
+    border-radius: 2px
+}
+
+.pdfResume {
+    width: 205px;
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 21px 0;
+    border: 1px solid #cdcfd1;
+    background: #efefef;
+    border-radius: 2px;
+    color: #3d4451;
+    font-weight: bold;
+    margin: 32px auto;
+    transition: box-shadow 0.2s;
+    text-align: center;
+}
+
+.pdfResume:hover {
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
+}
+
+.selfAnnounce {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.works {
+    margin-bottom: 80px;
+}
+
+.works nav{
+    display: flex;
+    justify-content: center;
+}
+
+.works nav a:nth-child(2) {
+    margin: 0 25px;
+}
+
+.works .loading {
+    height: 5px;
+    background: white;
+    margin: 5px auto 28px auto;
+    border-radius: 2px;
+    width: 170px;
+}
+
+.works .loaded {
+    width: 33.3%;
+    height: 100%;
+    background: #E6686A;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.works  .loaded-2 {
+    margin-left: 33.3%;
+}
+
+.works  .loaded-3 {
+    margin-left: 66.6%;
+}
+
+.works .worksImg img{
+    display: block;
+}
+
+
+
+.works .worksImg {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.works .worksImg > .col {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
